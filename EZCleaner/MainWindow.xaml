@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EZCleaner"
         mc:Ignorable="d"
-        Title="EZ Cleaner" Height="450" Width="800">
+        x:Name="fenetre"
+        Title="EZ Cleaner" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/images/nettoyage-des-donnees.png">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="93*"/>
+        </Grid.ColumnDefinitions>
 
     </Grid>
 </Window>

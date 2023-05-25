@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\theop\\FormationCS\\EZCleaner\\EZCleaner\\EZCleaner.csproj": {}
+    "C:\\Users\\theop\\EZCleaner\\EZCleaner\\EZCleaner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\theop\\FormationCS\\EZCleaner\\EZCleaner\\EZCleaner.csproj": {
+    "C:\\Users\\theop\\EZCleaner\\EZCleaner\\EZCleaner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\theop\\FormationCS\\EZCleaner\\EZCleaner\\EZCleaner.csproj",
+        "projectUniqueName": "C:\\Users\\theop\\EZCleaner\\EZCleaner\\EZCleaner.csproj",
         "projectName": "EZCleaner",
-        "projectPath": "C:\\Users\\theop\\FormationCS\\EZCleaner\\EZCleaner\\EZCleaner.csproj",
+        "projectPath": "C:\\Users\\theop\\EZCleaner\\EZCleaner\\EZCleaner.csproj",
         "packagesPath": "C:\\Users\\theop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\theop\\FormationCS\\EZCleaner\\EZCleaner\\obj\\",
+        "outputPath": "C:\\Users\\theop\\EZCleaner\\EZCleaner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
