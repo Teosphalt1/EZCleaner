@@ -8,10 +8,29 @@
         x:Name="fenetre"
         Title="EZ Cleaner" Height="700" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="/images/nettoyage-des-donnees.png">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="93*"/>
-        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Center" Height="175" VerticalAlignment="Top" Width="1000" Fill="#FF007791"/>
+        <Rectangle HorizontalAlignment="Center" Height="10" VerticalAlignment="Top" Width="1000" Fill="#FFF9F9F9" Margin="0,175,0,0"/>
+        <!--Titre-->
+        <Label x:Name="titre1" Content="Analyse du PC nécessaire" HorizontalAlignment="Left" Height="62" Margin="35,37,0,0" VerticalAlignment="Top" Width="562" Foreground="White" FontFamily="Arial" FontSize="28" FontWeight="Bold"/>
+        <!--Sous-titres-->
+        <Label Content="Espace à nettoyer : " HorizontalAlignment="Left" Height="36" Margin="35,99,0,0" VerticalAlignment="Top" Width="214" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Dernière analyse : " HorizontalAlignment="Left" Height="31" Margin="35,135,0,0" VerticalAlignment="Top" Width="202" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <!--Valeurs-->
+        <Label x:Name="date1" Content="??? Mb" HorizontalAlignment="Left" Height="30" Margin="254,102,0,0" VerticalAlignment="Top" Width="93" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="espace1" Content="Jamais" HorizontalAlignment="Left" Height="31" Margin="254,135,0,0" VerticalAlignment="Top" Width="83" Foreground="White" FontFamily="Arial" FontSize="22"/>
+        <Button Content="ANALYSER" HorizontalAlignment="Left" Height="77" Margin="658,55,0,0" VerticalAlignment="Top" Width="297" Background="{x:Null}" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26"/>
+            
+        <Button Content="&#xD;&#xA;&#xA;NETTOYER" HorizontalAlignment="Left" Height="180" Margin="35,209,0,0" VerticalAlignment="Top" Width="400" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26" Background="#FF007791"/>
+        <Button Content="&#xA;&#xD;&#xA;MISE A JOUR" HorizontalAlignment="Left" Height="180" Margin="35,431,0,0" VerticalAlignment="Top" Width="400" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26" Background="#FF007791"/>
+        <Button Content="&#xD;&#xA;&#xA;HISTORIQUE" HorizontalAlignment="Right" Height="180" Margin="0,209,35,0" VerticalAlignment="Top" Width="400" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26" Background="#FF007791"/>
+        <Button Content="&#xD;&#xA;&#xA;SITE WEB" HorizontalAlignment="Right" Height="180" Margin="0,431,35,0" VerticalAlignment="Top" Width="400" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26" Background="#FF007791"/>
+
+        <Canvas>
+            <Image Height="80" Width="80" Margin="195,219,725,385" Source="/images/nettoyer.png" IsHitTestVisible="False"/>
+            <Image Height="80" Width="80" Margin="725,219,195,385" Source="/presse-papiers .png" IsHitTestVisible="False"/>
+            <Image Height="80" Width="80" Margin="195,441,725,163" Source="/images/system-update.png" IsHitTestVisible="False"/>
+            <Image Height="80" Width="80" Margin="725,441,195,163" Source="/images/world-wide-web.png" IsHitTestVisible="False"/>
+        </Canvas>
 
     </Grid>
 </Window>

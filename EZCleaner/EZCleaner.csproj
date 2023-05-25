@@ -9,12 +9,33 @@
 
   <ItemGroup>
     <None Remove="images\nettoyage-des-donnees.png" />
+    <None Remove="images\nettoyer.png" />
+    <None Remove="images\presse-papiers .png" />
+    <None Remove="images\presse-papiers.png" />
+    <None Remove="images\system-update.png" />
+    <None Remove="images\world-wide-web.png" />
+    <None Remove="nettoyer.png" />
+    <None Remove="presse-papiers .png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="images\nettoyage-des-donnees.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="images\nettoyer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\presse-papiers .png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\system-update.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\world-wide-web.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="nettoyer.png" />
+    <Resource Include="presse-papiers .png" />
   </ItemGroup>
 
 </Project>
