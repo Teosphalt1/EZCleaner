@@ -1,5 +1,6 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,32 @@ namespace EZCleaner
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_MAJ_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Votre logiciel est à jour.", "Mise à jour", MessageBoxButton.YesNo, MessageBoxImage.Information);
+        }
+
+        private void Button_Historic_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("TODO: créer page historique");
+        }
+
+        private void Button_Web_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = "https://www.theophile-mariotte-portfolio.fr/",
+                    UseShellExecute = true
+                });
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Erreur: {ex.Message}");
+            }
         }
     }
 }
