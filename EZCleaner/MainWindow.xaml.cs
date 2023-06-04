@@ -123,7 +123,39 @@ namespace EZCleaner
 
 
             espace.Content = totalSize + " Mb";
+            titre1.Content = "Analyse effectuée";
+            btnClean.Content = "\n\n\nNETTOYER";
             date.Content = DateTime.Now;
+        }
+
+        private void Button_Clean_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Nettoyage en cours...");
+            btnClean.Content = "\n\n\nNettoyage en cours";
+
+            Clipboard.Clear();
+
+            try
+            {
+                ClearTempData(winTemp);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Erreur : {ex.Message}");
+            }
+
+            try
+            {
+                ClearTempData(appTemp);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erreur : {ex.Message}");
+            }
+
+            btnClean.Content = "\n\n\nNettoyage terminé";
+            titre1.Content = "Nettoyage effectuée";
+            espace.Content = "0 Mb";
         }
     }
 }
