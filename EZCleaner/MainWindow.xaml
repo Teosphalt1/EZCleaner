@@ -16,9 +16,9 @@
         <Label Content="Espace à nettoyer : " HorizontalAlignment="Left" Height="36" Margin="35,99,0,0" VerticalAlignment="Top" Width="214" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
         <Label Content="Dernière analyse : " HorizontalAlignment="Left" Height="31" Margin="35,135,0,0" VerticalAlignment="Top" Width="202" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
         <!--Valeurs-->
-        <Label x:Name="date1" Content="??? Mb" HorizontalAlignment="Left" Height="30" Margin="254,102,0,0" VerticalAlignment="Top" Width="93" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="espace1" Content="Jamais" HorizontalAlignment="Left" Height="31" Margin="254,135,0,0" VerticalAlignment="Top" Width="83" Foreground="White" FontFamily="Arial" FontSize="22"/>
-        <Button Content="ANALYSER" HorizontalAlignment="Left" Height="77" Margin="658,55,0,0" VerticalAlignment="Top" Width="297" Background="{x:Null}" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26"/>
+        <Label  x:Name="espace" Content="??? Mb" HorizontalAlignment="Left" Height="30" Margin="254,102,0,0" VerticalAlignment="Top" Width="181" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="date" Content="Jamais" HorizontalAlignment="Left" Height="31" Margin="254,135,0,0" VerticalAlignment="Top" Width="416" Foreground="White" FontFamily="Arial" FontSize="22"/>
+        <Button Content="ANALYSER" HorizontalAlignment="Left" Height="77" Margin="658,55,0,0" VerticalAlignment="Top" Width="297" Background="{x:Null}" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26" Click="Button_Analyze_Click"/>
 
         <Button Content="&#xD;&#xA;&#xA;&#xA;NETTOYER" HorizontalAlignment="Left" Height="180" Margin="35,209,0,0" VerticalAlignment="Top" Width="400" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26" Background="#FF007791"/>
         <Button Content="&#xD;&#xA;&#xA;&#xA;MISE A JOUR" HorizontalAlignment="Left" Height="180" Margin="35,431,0,0" VerticalAlignment="Top" Width="400" BorderThickness="6,6,6,6" BorderBrush="White" Foreground="White" FontWeight="Bold" FontFamily="Arial" FontSize="26" Background="#FF007791" Click="Button_MAJ_Click"/>

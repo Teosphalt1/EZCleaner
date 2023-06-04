@@ -1,6 +1,7 @@
 ﻿ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,58 @@ namespace EZCleaner
     /// </summary>
     public partial class MainWindow : Window
     {
+        public DirectoryInfo winTemp;
+        public DirectoryInfo appTemp;
+
         public MainWindow()
         {
             InitializeComponent();
+            winTemp = new DirectoryInfo(@"C:\Windows\Temp");
+            appTemp = new DirectoryInfo(System.IO.Path.GetTempPath());
+
+        }
+
+        /// <summary>
+        /// Calcul la taille d'un dossier
+        /// </summary>
+        /// <param name="dir"></param>
+        /// <returns></returns>
+        public long DirSize(DirectoryInfo dir)
+        {
+            return dir.GetFiles().Sum(f => f.Length) + dir.GetDirectories().Sum(d => DirSize(d));
+        }
+
+        /// <summary>
+        /// Vider un dossier
+        /// </summary>
+        /// <param name="dir"></param>
+        public void ClearTempData(DirectoryInfo dir)
+        {
+            foreach(FileInfo file in dir.GetFiles())
+            {
+                try
+                {
+                    file.Delete();
+                    Console.WriteLine(file.FullName);
+                }
+                catch (Exception ex)
+                {
+                    continue;
+                }
+            }
+
+            foreach(DirectoryInfo di in dir.GetDirectories())
+            {
+                try
+                {
+                    di.Delete(true);
+                    Console.WriteLine();
+                }
+                catch (Exception ex)
+                {
+                    continue;
+                }
+            }
         }
 
         private void Button_MAJ_Click(object sender, RoutedEventArgs e)
@@ -50,6 +100,30 @@ namespace EZCleaner
             {
                 Console.WriteLine($"Erreur: {ex.Message}");
             }
+        }
+
+        private void Button_Analyze_Click(object sender, RoutedEventArgs e)
+        {
+            AnalyzeFolders();
+        }
+
+        public void AnalyzeFolders()
+        {
+            long totalSize = 0;
+
+            try
+            {
+                totalSize += DirSize(winTemp) / 1000000;
+                totalSize += DirSize(appTemp) / 1000000;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Impossible d'analyser les dossiers: {ex.Message}");
+            }
+
+
+            espace.Content = totalSize + " Mb";
+            date.Content = DateTime.Now;
         }
     }
 }
