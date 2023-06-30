@@ -30,7 +30,7 @@ namespace EZCleaner
             InitializeComponent();
             winTemp = new DirectoryInfo(@"C:\Windows\Temp");
             appTemp = new DirectoryInfo(System.IO.Path.GetTempPath());
-
+            GetDate();
         }
 
         /// <summary>
@@ -126,6 +126,7 @@ namespace EZCleaner
             titre1.Content = "Analyse effectuée";
             btnClean.Content = "\n\n\nNETTOYER";
             date.Content = DateTime.Now;
+            SaveDate();
         }
 
         private void Button_Clean_Click(object sender, RoutedEventArgs e)
@@ -156,6 +157,21 @@ namespace EZCleaner
             btnClean.Content = "\n\n\nNettoyage terminé";
             titre1.Content = "Nettoyage effectuée";
             espace.Content = "0 Mb";
+        }
+
+        public void SaveDate()
+        {
+            string date = DateTime.Today.ToString();
+            File.WriteAllText("date.txt", date);
+        }
+
+        public void GetDate()
+        {
+            string dateFichier = File.ReadAllText("date.txt");
+            if (dateFichier != string.Empty)
+            {
+                date.Content = dateFichier;
+            }
         }
     }
 }
